@@ -17,20 +17,82 @@
                 <h1 class="score text-center">12</h1>
             </div>
         </div>
-        <div class="main-content d-flex flex-column justify-content-center">
-            <div class="images-container d-flex flex-row">
+        <div class="main-content d-flex flex-column justify-content-between">
+
+            <!-- ####### CHOICE CHOOSING WINDOW ######## -->
+
+            <div class="images-to-choose-container d-flex flex-row d-none">
                 <div class="top-2-images d-flex flex-row">
-                    <div class="paper-image-container d-flex flex-column justify-content-center">
-                        <img class = "paper-image" src="./images/icon-paper.svg" alt="">
+                    <div class="image-container paper-image-container d-flex flex-column justify-content-center">
+                        <img class = "image" src="./images/icon-paper.svg" alt="">
                     </div>
-                    <div class="paper-image-container d-flex flex-column justify-content-center">
-                        <img class = "paper-image" src="./images/icon-paper.svg" alt="">
+                    <div class="image-container scissors-image-container d-flex flex-column justify-content-center">
+                        <img class = "image" src="./images/icon-scissors.svg" alt="">
                     </div>
                 </div>
-                <div class="paper-image-container rock-image-container d-flex flex-column justify-content-center">
-                    <img class = "paper-image" src="./images/icon-paper.svg" alt="">
+                <div class="image-container rock-image-container d-flex flex-column justify-content-center">
+                    <img class = "image" src="./images/icon-rock.svg" alt="">
                 </div>
             </div>
+
+            <!-- #### HOUSE LOADING CHOICE WINDOW ##### -->
+
+            <div class="house-loading-choice-container d-flex flex-row d-none">
+                <div class="d-flex flex-column">
+                    <div class="image-container my-choice-container paper-image-container d-flex flex-column justify-content-center">
+                        <img class = "image" src="./images/icon-paper.svg" alt="">
+                    </div>
+                    <h1 class="picked-heading">YOU PICKED</h1>
+                </div>
+                <div class="house-choice-container d-flex flex-column">
+                    <div class="house-picking-choice-container d-flex flex-column justify-content-center">
+                        
+                    </div>
+                    <h1 class="house-picking-choice-heading">HOUSE PICKED</h1>
+                </div>
+            </div>
+
+            <!-- ####### HOUSE PICKED CHOICE ####### -->
+
+            <div class="house-picked-choice-container d-flex flex-row d-none">
+                <div class="d-flex flex-column">
+                    <div class="image-container my-choice-container paper-image-container d-flex flex-column justify-content-center">
+                        <img class = "image" src="./images/icon-paper.svg" alt="">
+                    </div>
+                    <h1 class="picked-heading">YOU PICKED</h1>
+                </div>
+                <div class="house-choice-container d-flex flex-column">
+                    <div class="image-container my-choice-container paper-image-container d-flex flex-column justify-content-center">
+                        <img class = "image" src="./images/icon-paper.svg" alt="">
+                    </div>
+                    <h1 class="picked-heading">HOUSE PICKED</h1>
+                </div>
+            </div>
+
+            <!-- ############ RESULT ############ -->
+
+            <div class="result-container d-flex flex-column">
+                <div class="result-choice-container d-flex flex-row">  
+                    <div class="result--image-and-heading d-flex flex-column">
+                        <div class="image-container my-result-choice-container paper-image-container d-flex flex-column justify-content-center">
+                            <img class = "image" src="./images/icon-paper.svg" alt="">
+                        </div>
+                        <h1 class="picked-heading">YOU PICKED</h1>
+                    </div>
+                    <div class="result--image-and-heading  d-flex flex-column">
+                        <div class="image-container my-choice-container paper-image-container d-flex flex-column justify-content-center">
+                            <img class = "image" src="./images/icon-paper.svg" alt="">
+                        </div>
+                        <h1 class="picked-heading">HOUSE PICKED</h1>
+                    </div>
+                </div>
+                <div class="result-display">
+                    <h1 class="result">YOU WIN</h1>
+                    <button class="btn play-again-button">Play Again</button>
+                </div>
+            </div>
+
+            <button class="btn rules-button">Rules</button>
         </div> 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

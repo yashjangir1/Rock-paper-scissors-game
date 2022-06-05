@@ -2,6 +2,7 @@
 
 body{
     margin: 0px;
+    background-color: #021a3d;
 }
 
 *{
@@ -62,31 +63,185 @@ body{
     align-self: center;
 }
 
-.images-container{
+.images-to-choose-container{
     background-image: url(../images/bg-triangle.png);
     background-repeat: no-repeat;
     background-size: 200px 200px;
     background-position: center;
-    border: 1px solid red;
     flex-wrap: wrap;
     width: 260px;
     padding: 10px;
     align-self: center;
     justify-content: center;
+    margin-top: 50px;
 }
 
-.paper-image-container{
-    border: 1px solid blue;
-    height: 120px;
-    width: 120px;
+.image-container{
+    height: 100px;
+    width: 100px;
     border-radius: 1500px;
     margin: 10px;
     align-items: center;
-    border: 15px solid #0667d6;
     background-color: #ffffff;
 }
 
-.paper-image{
-    width: 40px;
-    height: 50px;
+.paper-image-container{
+    border: 12px solid #0667d6;
+    box-shadow: inset 0px 3px 0px 0px #cbc8c8, 0px 3px 0px 0px blue;
+}
+
+.scissors-image-container{
+    border: 12px solid #f5c116;
+    box-shadow: inset 0px 3px 0px 0px #cbc8c8, 0px 3px 0px 0px #ba9004;
+}
+
+.rock-image-container{
+    border: 12px solid #ed0937;
+    box-shadow: inset 0px 3px 0px 0px #cbc8c8, 0px 3px 0px 0px #990825;
+}
+
+.image{
+    width: 30px;
+    height: 40px;
+}
+
+.rules-button{
+    border: 2px solid rgb(255,255,255, 0.4);
+    font-family: "Roboto Condensed";
+    color: #ffffff;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 140px;
+    align-self: center;
+    margin-top: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+.house-loading-choice-container{
+    flex-wrap: wrap;
+    width: 130%;
+    padding: 0px;
+    align-self: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.picked-heading{
+    color: #ffffff;
+    font-family: "Roboto Condensed";
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    align-self: center;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.my-choice-container{
+    margin-right: 0px;
+}
+
+.house-choice-container{
+    margin-left: 20px;
+}
+
+.house-picking-choice-container{
+    height: 90px;
+    width: 90px;
+    background-color: #021532;
+    margin-top: 15px;
+    margin-left: 15px;
+    border-radius: 1000px;
+    padding: 0px;
+}
+
+.house-picking-choice-heading{
+    color: #ffffff;
+    font-family: "Roboto Condensed";
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    align-self: center;
+    margin-top: 35px;
+    text-align: center;
+}
+
+
+
+.house-picked-choice-container{
+    flex-wrap: wrap;
+    width: 130%;
+    padding: 0px;
+    align-self: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+
+
+
+
+
+.result-container{
+    height: 100%;
+}
+
+.result-choice-container{
+    flex-wrap: wrap;
+    width: 130%;
+    padding: 0px;
+    align-self: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.result--image-and-heading {
+    margin: 0px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.result-display{
+    align-self: center;
+    margin-top: 10px;
+}
+
+.result{
+    font-family: "Roboto Condensed";
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin: 0px;
+    text-align: center;
+}
+
+.play-again-button{
+    background-color: #ffffff;
+    color: #021a3d;
+    width: 150px;
+    font-family: "Roboto Condensed";
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+.light-shadow{
+    padding: 3px;
+    background-color: rgb(255,255,255, 0.1);
+    border-radius: 1000px;
+}
+
+.shadow{
+    padding: 3px;
+    background-color: rgb(255,255,255, 0.2);
+    box-shadow: 10px 10px 10px 10px #ffffff;
+    border-radius: 1000px;
+    margin: 15px;
 }
