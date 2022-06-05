@@ -11,16 +11,25 @@
 <body>
     <div class="main-container d-flex flex-column">
         <div class="scores-and-title-container d-flex flex-row  justify-content-between row">
-            <h1 class="page-heading col-5">Rock Paper Scissors</h1>
+            <img class = "logo" src="./images/logo.svg" alt="">
             <div class="score-container d-flex flex-column justify-content-center col-4">
                 <p class="score-title text-center">SCORE</p>
                 <h1 class="score text-center">12</h1>
             </div>
         </div>
-        <div class="main-content d-flex flex-row justify-content-center">
-            <img class = "background-triangle" src="./images/bg-triangle.png" alt="">
-            <div class="images-container">
-                <img src="./images/icon-paper.svg" alt="">
+        <div class="main-content d-flex flex-column justify-content-center">
+            <div class="images-container d-flex flex-row">
+                <div class="top-2-images d-flex flex-row">
+                    <div class="paper-image-container d-flex flex-column justify-content-center">
+                        <img class = "paper-image" src="./images/icon-paper.svg" alt="">
+                    </div>
+                    <div class="paper-image-container d-flex flex-column justify-content-center">
+                        <img class = "paper-image" src="./images/icon-paper.svg" alt="">
+                    </div>
+                </div>
+                <div class="paper-image-container rock-image-container d-flex flex-column justify-content-center">
+                    <img class = "paper-image" src="./images/icon-paper.svg" alt="">
+                </div>
             </div>
         </div> 
     </div>
