@@ -12,7 +12,7 @@
     <div class="main-container d-flex flex-column" id = "mainContainer">
         <div class="scores-and-title-container d-flex flex-row  justify-content-between row" id = "scoreCard">
             <img class = "logo" src="./images/logo.svg" alt="">
-            <div class="score-container d-flex flex-column justify-content-center col-4">
+            <div class="score-container d-flex flex-column justify-content-center col-4 col-md-2">
                 <p class="score-title text-center">SCORE</p>
                 <h1 class="score text-center" id = "score">0</h1>
             </div>
@@ -21,7 +21,7 @@
 
             <!-- ####### CHOICE CHOOSING WINDOW ######## -->
 
-            <div class="images-to-choose-container d-flex flex-row" id = "toChooseWindow">
+            <div class="images-to-choose-container d-flex flex-row d-none" id = "toChooseWindow">
                 <div class="top-2-images d-flex flex-row">
                     <div class="image-container paper-image-container d-flex flex-column justify-content-center" id = "paper">
                         <img class = "image" src="./images/icon-paper.svg" alt="">
@@ -38,13 +38,13 @@
             <!-- #### HOUSE LOADING CHOICE WINDOW ##### -->
 
             <div class="house-loading-choice-container d-flex flex-row d-none" id = "loadingWindow">
-                <div class="d-flex flex-column">
-                    <div class="image-container my-choice-container paper-image-container d-flex flex-column justify-content-center" id = "myLoadingChoice">
+                <div class="my-loading-choice-container d-flex flex-column">
+                    <div class="image-container my-choice-md-devices my-choice-container paper-image-container d-flex flex-column justify-content-center" id = "myLoadingChoice">
                         <img id = "myLoadingChoiceImage" class = "image" src="./images/icon-paper.svg" alt="">
                     </div>
                     <h1 class="picked-heading">YOU PICKED</h1>
                 </div>
-                <div class="house-choice-container d-flex flex-column">
+                <div class="house-choice-container d-flex flex-column justify-content-center">
                     <div class="house-picking-choice-container d-flex flex-column justify-content-center">
                         
                     </div>
@@ -56,13 +56,13 @@
 
             <div class="house-picked-choice-container d-flex flex-row d-none" id = "loadedChoiceWindow">
                 <div class="d-flex flex-column">
-                    <div class="image-container my-choice-container paper-image-container d-flex flex-column justify-content-center" id = "myLoadedChoice">
+                    <div class="image-container my-choice-md-devices my-choice-container paper-image-container d-flex flex-column justify-content-center" id = "myLoadedChoice">
                         <img id = "myLoadedChoiceImage" class = "image" src="./images/icon-paper.svg" alt="">
                     </div>
                     <h1 class="picked-heading">YOU PICKED</h1>
                 </div>
                 <div class="house-choice-container d-flex flex-column">
-                    <div class="image-container my-choice-container paper-image-container d-flex flex-column justify-content-center" id = "houseChoice">
+                    <div class="image-container my-choice-md-devices my-choice-container paper-image-container d-flex flex-column justify-content-center" id = "houseChoice">
                         <img id = "houseChoiceImage" class = "image" src="./images/icon-paper.svg" alt="">
                     </div>
                     <h1 class="picked-heading">HOUSE PICKED</h1>
@@ -71,22 +71,26 @@
 
             <!-- ############ RESULT ############ -->
 
-            <div class="result-container d-flex flex-column d-none" id = "resultWindow">
+            <div class="result-container d-flex flex-column" id = "resultWindow">
                 <div class="result-choice-container d-flex flex-row">  
                     <div class="result--image-and-heading d-flex flex-column">
-                        <div class="image-container my-result-choice-container paper-image-container d-flex flex-column justify-content-center" id = "myResultChoice">
+                        <div class="image-container my-choice-md-devices my-result-choice-container paper-image-container d-flex flex-column justify-content-center" id = "myResultChoice">
                             <img id = "myResultChoiceImage" class = "image" src="./images/icon-paper.svg" alt="">
                         </div>
                         <h1 class="picked-heading">YOU PICKED</h1>
                     </div>
+                    <div class="result-display-md-devices d-none d-md-block">
+                        <h1 class="result" id = "result">YOU WIN</h1>
+                        <button class="btn play-again-button" id = "playAgainButton">Play Again</button>
+                    </div>
                     <div class="result--image-and-heading  d-flex flex-column">
-                        <div class="image-container my-choice-container paper-image-container d-flex flex-column justify-content-center" id = "houseResultChoice">
+                        <div class="image-container my-choice-md-devices my-choice-container paper-image-container d-flex flex-column justify-content-center" id = "houseResultChoice">
                             <img id = "houseResultChoiceImage" class = "image" src="./images/icon-paper.svg" alt="">
                         </div>
                         <h1 class="picked-heading">HOUSE PICKED</h1>
                     </div>
                 </div>
-                <div class="result-display">
+                <div class="result-display d-md-none">
                     <h1 class="result" id = "result">YOU WIN</h1>
                     <button class="btn play-again-button" id = "playAgainButton">Play Again</button>
                 </div>
