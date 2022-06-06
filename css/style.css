@@ -9,6 +9,37 @@ body{
     box-sizing: border-box;
 }
 
+.rules-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 40px;
+    color: #ffffff;
+}
+
+.rules-image{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 280px;
+    align-self: center;
+}
+
+.rules-heading{
+    font-family: "Roboto Condensed";
+    font-size: 27px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: #021a3d;
+}
+
+.cross-button{
+    text-align: center;
+    font-size: 30px;
+    margin-top: auto;
+    color: rgb(172, 172, 172)
+}
+
 .main-container{
     background-color: #021a3d;
     background-size: cover;
@@ -220,6 +251,7 @@ body{
     color: #ffffff;
     margin: 0px;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .play-again-button{
@@ -230,18 +262,4 @@ body{
     font-size: 16px;
     letter-spacing: 2px;
     margin-top: 10px;
-}
-
-.light-shadow{
-    padding: 3px;
-    background-color: rgb(255,255,255, 0.1);
-    border-radius: 1000px;
-}
-
-.shadow{
-    padding: 3px;
-    background-color: rgb(255,255,255, 0.2);
-    box-shadow: 10px 10px 10px 10px #ffffff;
-    border-radius: 1000px;
-    margin: 15px;
 }
