@@ -14,14 +14,14 @@
             <img class = "logo" src="./images/logo.svg" alt="">
             <div class="score-container d-flex flex-column justify-content-center col-4 col-md-2">
                 <p class="score-title text-center">SCORE</p>
-                <h1 class="score text-center" id = "score">0</h1>
+                <h1 class="score text-center" id = "score"></h1>
             </div>
         </div>
         <div class="main-content d-flex flex-column justify-content-between" id = "mainContent">
 
             <!-- ####### CHOICE CHOOSING WINDOW ######## -->
 
-            <div class="images-to-choose-container d-flex flex-row d-none" id = "toChooseWindow">
+            <div class="images-to-choose-container d-flex flex-row" id = "toChooseWindow">
                 <div class="top-2-images d-flex flex-row">
                     <div class="image-container paper-image-container d-flex flex-column justify-content-center" id = "paper">
                         <img class = "image" src="./images/icon-paper.svg" alt="">
@@ -71,8 +71,8 @@
 
             <!-- ############ RESULT ############ -->
 
-            <div class="result-container d-flex flex-column" id = "resultWindow">
-                <div class="result-choice-container d-flex flex-row">  
+            <div class="result-container d-flex flex-column d-none" id = "resultWindow">
+                <div class="result-choice-container d-flex flex-row"> 
                     <div class="result--image-and-heading d-flex flex-column">
                         <div class="image-container my-choice-md-devices my-result-choice-container paper-image-container d-flex flex-column justify-content-center" id = "myResultChoice">
                             <img id = "myResultChoiceImage" class = "image" src="./images/icon-paper.svg" alt="">
@@ -83,7 +83,7 @@
                         <h1 class="result" id = "result">YOU WIN</h1>
                         <button class="btn play-again-button" id = "playAgainButton">Play Again</button>
                     </div>
-                    <div class="result--image-and-heading  d-flex flex-column">
+                    <div class="result--image-and-heading d-flex flex-column">
                         <div class="image-container my-choice-md-devices my-choice-container paper-image-container d-flex flex-column justify-content-center" id = "houseResultChoice">
                             <img id = "houseResultChoiceImage" class = "image" src="./images/icon-paper.svg" alt="">
                         </div>
@@ -95,8 +95,11 @@
                     <button class="btn play-again-button" id = "playAgainButton">Play Again</button>
                 </div>
             </div>
-
-            <button class="btn rules-button" id = "rulesButton">Rules</button>
+              
+            <div class="buttons-container d-flex">
+                <button class="btn reset-button" id = "resetButton">New Game</button>
+                <button class="btn rules-button" id = "rulesButton">Rules</button>
+            </div>
         </div> 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

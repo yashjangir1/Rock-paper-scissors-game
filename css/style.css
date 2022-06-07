@@ -40,6 +40,56 @@ body{
     color: rgb(172, 172, 172)
 }
 
+.rules-md-container{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    min-height: 100%;
+    width: 100%;
+    background-color: rgb(1, 14, 34, 0.8);
+}
+
+.rules-md-main-container{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 10px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 400px;
+    padding: 40px;
+}
+
+.rules-heading-close-icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cross-button-md{
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(172, 172, 172)
+}
+
+.rules-heading-md{
+    font-family: "Roboto Condensed";
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #021a3d;
+}
+
+.rules-md-image{
+    width: 260px;
+    align-self: center;
+    margin-top: 40px;
+}
+
 .main-container{
     background-color: #021a3d;
     background-size: cover;
@@ -136,14 +186,31 @@ body{
     height: 40px;
 }
 
+.buttons-container{
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.reset-button{
+    border: 2px solid rgb(255,255,255, 0.4);
+    font-family: "Roboto Condensed";
+    color: #ffffff;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 130px;
+    align-self: center;
+    border-radius: 10px;
+}
+
 .rules-button{
     border: 2px solid rgb(255,255,255, 0.4);
     font-family: "Roboto Condensed";
     color: #ffffff;
-    font-size: 20px;
+    font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    width: 140px;
+    width: 100px;
     align-self: center;
     margin-top: 30px;
     border-radius: 10px;
@@ -327,11 +394,20 @@ body{
     .picked-heading{
         order: -1;
         font-size: 16px;
+        text-align: center;
     }
 
     .house-choice-container{
         align-self: center;
         margin-left: 80px;
+    }
+
+    .house-loading-choice-container{
+        width: 100%;
+    }
+
+    .house-picked-choice-container{
+        width: 100%;
     }
 
     .house-picking-choice-container{
@@ -352,6 +428,11 @@ body{
         width: 200px;
         height: 200px;
         margin-top: 20px;
+    }
+
+    .result-choice-container{
+        width: 100%;
+        flex-wrap: nowrap;
     }
 
     .result-display-md-devices{

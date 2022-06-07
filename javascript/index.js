@@ -2,39 +2,95 @@ let rulesButtonEl = document.getElementById("rulesButton")
 let mainContainerEl = document.getElementById('mainContainer')
 let mainContentEl = document.getElementById("mainContent")
 let scoreCardEl = document.getElementById("scoreCard")
+let scoreEl = document.getElementById("score")
 
-rulesButtonEl.onclick = function(){
-    mainContainerEl.classList.add("d-none")
+let resetButtonEl = document.getElementById("resetButton")
 
-    let rulesContainer = document.createElement('div')
-    rulesContainer.classList.add("rules-container")
-    document.querySelector('body').style.backgroundColor = "#ffffff"
-    document.querySelector('body').appendChild(rulesContainer)
+let score
 
-    rulesHeadingEl = document.createElement('h1')
-    rulesContainer.appendChild(rulesHeadingEl)
-    rulesHeadingEl.classList.add("rules-heading")
-    rulesHeadingEl.textContent = "Rules"
-
-    let rulesImageEl = document.createElement("img")
-    rulesImageEl.src = "./images/image-rules.svg"
-    rulesImageEl.classList.add("rules-image")
-    rulesContainer.appendChild(rulesImageEl)
-
-    let closeButtonEl = document.createElement("i")
-    closeButtonEl.classList.add("fa-solid", "fa-xmark", "cross-button")
-    closeButtonEl.id = "closeButton"
-    rulesContainer.appendChild(closeButtonEl)
-
-    closeButtonEl.addEventListener("click", function(){
-        document.querySelector('body').style.backgroundColor = "#021a3d"
-        mainContainerEl.classList.remove("d-none")
-        rulesContainer.classList.add("d-none")
-    })
+if(localStorage.getItem('score') === null){
+    score = 0;
+    localStorage.setItem('score', score)
 }
 
-let scoreEl = document.getElementById("score")
-let score = 0;
+score = localStorage.getItem('score')
+scoreEl.textContent = score;
+
+
+resetButtonEl.onclick = function(){
+    score = 0
+    localStorage.setItem('score',score)
+    scoreEl.textContent = score;
+}
+
+score = parseInt(localStorage.getItem('score'))
+scoreEl.textContent = score
+
+rulesButtonEl.onclick = function(){
+    let x = window.matchMedia("(max-width: 767px)")
+
+    if(x.matches){
+        mainContainerEl.classList.add("d-none")
+
+        let rulesContainer = document.createElement('div')
+        rulesContainer.classList.add("rules-container")
+        document.querySelector('body').style.backgroundColor = "#ffffff"
+        document.querySelector('body').appendChild(rulesContainer)
+
+        rulesHeadingEl = document.createElement('h1')
+        rulesContainer.appendChild(rulesHeadingEl)
+        rulesHeadingEl.classList.add("rules-heading")
+        rulesHeadingEl.textContent = "Rules"
+
+        let rulesImageEl = document.createElement("img")
+        rulesImageEl.src = "./images/image-rules.svg"
+        rulesImageEl.classList.add("rules-image")
+        rulesContainer.appendChild(rulesImageEl)
+
+        let closeButtonEl = document.createElement("i")
+        closeButtonEl.classList.add("fa-solid", "fa-xmark", "cross-button")
+        closeButtonEl.id = "closeButton"
+        rulesContainer.appendChild(closeButtonEl)
+
+        closeButtonEl.addEventListener("click", function(){
+            document.querySelector('body').style.backgroundColor = "#021a3d"
+            mainContainerEl.classList.remove("d-none")
+            rulesContainer.classList.add("d-none")
+        })
+    }
+    else{
+        let rulesmdContainer = document.createElement('div')
+        rulesmdContainer.classList.add("rules-md-container")
+        document.querySelector('body').appendChild(rulesmdContainer)
+
+        let rulesmdMainContainerEl = document.createElement("div")
+        rulesmdMainContainerEl.classList.add("rules-md-main-container")
+        rulesmdContainer.appendChild(rulesmdMainContainerEl)
+
+        rulesHeadingAndCloseIcon = document.createElement("div")
+        rulesHeadingAndCloseIcon.classList.add("rules-heading-close-icon")
+        rulesmdMainContainerEl.appendChild(rulesHeadingAndCloseIcon)
+
+        rulesHeadingEl = document.createElement('h1')
+        rulesHeadingAndCloseIcon.appendChild(rulesHeadingEl)
+        rulesHeadingEl.classList.add("rules-heading-md")
+        rulesHeadingEl.textContent = "Rules"
+
+        let closeButtonEl = document.createElement("i")
+        closeButtonEl.classList.add("fa-solid", "fa-xmark", "cross-button-md")
+        closeButtonEl.id = "closeButton"
+        rulesHeadingAndCloseIcon.appendChild(closeButtonEl)
+
+        let rulesImageEl = document.createElement("img")
+        rulesImageEl.src = "./images/image-rules.svg"
+        rulesImageEl.classList.add("rules-md-image")
+        rulesmdMainContainerEl.appendChild(rulesImageEl)
+
+        closeButtonEl.addEventListener("click", function(){
+            rulesmdContainer.classList.add("d-none")
+        })
+    }
+}
 
 let toChooseWindowEl = document.getElementById("toChooseWindow")
 let paperEl = document.getElementById("paper")
@@ -105,6 +161,8 @@ paperEl.addEventListener("click", function(){
 
                 resultEl.textContent = "Draw"
 
+                playAgainButtonEl.style.color = "#021a3d"
+
                 loadedChoiceWindowEl.classList.add('d-none')
                 resultWindowEl.classList.remove("d-none")
 
@@ -138,6 +196,8 @@ paperEl.addEventListener("click", function(){
                 houseResultChoiceEl.classList.remove("paper-image-container")
 
                 resultEl.textContent = "You Lose"
+
+                playAgainButtonEl.style.color = "#ed0937"
 
                 loadedChoiceWindowEl.classList.add('d-none')
                 resultWindowEl.classList.remove("d-none")
@@ -173,10 +233,14 @@ paperEl.addEventListener("click", function(){
 
                 resultEl.textContent = "You Win"
 
+                playAgainButtonEl.style.color = "#021a3d"
+
                 loadedChoiceWindowEl.classList.add('d-none')
                 resultWindowEl.classList.remove("d-none")
 
                 score += 1
+                localStorage.setItem('score', score)
+
                 scoreEl.textContent = score
                 
             }, 300)
@@ -222,10 +286,14 @@ scissorEl.addEventListener("click", function(){
 
                 resultEl.textContent = "You Win"
 
+                playAgainButtonEl.style.color = "#021a3d"
+
                 loadedChoiceWindowEl.classList.add('d-none')
                 resultWindowEl.classList.remove("d-none")
 
                 score += 1
+                localStorage.setItem('score', score)
+
                 scoreEl.textContent = score
 
             }, 300)
@@ -256,6 +324,8 @@ scissorEl.addEventListener("click", function(){
                 houseResultChoiceEl.classList.remove("paper-image-container")
 
                 resultEl.textContent = "Draw"
+
+                playAgainButtonEl.style.color = "#021a3d"
 
                 loadedChoiceWindowEl.classList.add('d-none')
                 resultWindowEl.classList.remove("d-none")
@@ -290,6 +360,8 @@ scissorEl.addEventListener("click", function(){
                 houseResultChoiceEl.classList.remove("paper-image-container")
 
                 resultEl.textContent = "You Lose"
+
+                playAgainButtonEl.style.color = "#ed0937"
 
                 loadedChoiceWindowEl.classList.add('d-none')
                 resultWindowEl.classList.remove("d-none")
@@ -339,6 +411,8 @@ rockEl.addEventListener("click", function(){
 
                 resultEl.textContent = "You Lose"
 
+                playAgainButtonEl.style.color = "#ed0937"
+
                 loadedChoiceWindowEl.classList.add('d-none')
                 resultWindowEl.classList.remove("d-none")
 
@@ -373,10 +447,13 @@ rockEl.addEventListener("click", function(){
 
                 resultEl.textContent = "You Win"
 
+                playAgainButtonEl.style.color = "#021a3d"
+
                 loadedChoiceWindowEl.classList.add('d-none')
                 resultWindowEl.classList.remove("d-none")
 
                 score += 1
+                localStorage.setItem('score', score)
                 scoreEl.textContent = score
                 
             }, 300)
@@ -407,6 +484,8 @@ rockEl.addEventListener("click", function(){
                 houseResultChoiceEl.classList.remove("paper-image-container")
 
                 resultEl.textContent = "Draw"
+
+                playAgainButtonEl.style.color = "#021a3d"
 
                 loadedChoiceWindowEl.classList.add('d-none')
                 resultWindowEl.classList.remove("d-none")
