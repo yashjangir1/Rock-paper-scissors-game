@@ -118,7 +118,14 @@ let playAgainButtonEl = document.getElementById("playAgainButton")
 
 let randomNum;
 
+let playAgainButtonMdEl = document.getElementById("playAgainButtonMd")
+
 playAgainButtonEl.onclick = function(){
+    toChooseWindowEl.classList.remove("d-none")
+    resultWindowEl.classList.add('d-none')
+}
+
+playAgainButtonMdEl.onclick = function(){
     toChooseWindowEl.classList.remove("d-none")
     resultWindowEl.classList.add('d-none')
 }
